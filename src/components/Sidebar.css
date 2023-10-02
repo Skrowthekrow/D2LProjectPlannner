@@ -1,0 +1,15 @@
+/* Change hover color */
+.react-pro-sidebar .pro-menu-item:hover {
+    background-color: #555555 !important;
+  }
+  
+  /* Overlay Sidebar */
+  .sidebar {
+    position: fixed;
+    z-index: 1000;
+  }
+  
+/* Change hover color when the mouse is over the menu item */
+.react-pro-sidebar .pro-menu-item:hover {
+  background-color: #6b6a6a !important;
+}
