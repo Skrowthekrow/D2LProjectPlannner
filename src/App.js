@@ -22,12 +22,14 @@ function App() {
   };
 
   return (
+    
     <Router>
       <div className="App" style={appStyle}>
         <Sidebar />
         <div style={mainContentStyle}>
           <Header />
           <Routes>
+            <Route path="/" element={<Home />} index /> {/* Set Home as the default route */}
             <Route path="/documentation" element={<Documentation />} />
             <Route path="/features" element={<Features />} />
             <Route path="/contact-us" element={<ContactUs />} /> 
@@ -37,6 +39,7 @@ function App() {
         </div>
       </div>
     </Router>
+    
   );
 }
 
