@@ -2,6 +2,22 @@ import React from 'react';
 import logo from './component-assets/D2LPP-logo.png';  // Make sure to place your logo in the same directory or update this path
 
 const Home = () => {
+  const divStyle = {
+    backgroundColor: 'rgba(0, 0, 0, 0.5)', // Semi-transparent black
+    borderRadius: '10px', // Rounded edges
+    color: 'gold', // Text color set to gold
+    padding: '0px',
+    textAlign: 'center',
+    maxWidth: '700px',  // Set maximum width
+    margin: '0 auto'  // Center the div
+  };
+
+  const listStyle = {
+    listStyleType: 'none', // No bullets
+    padding: 0,
+    margin: 0
+  };
+
   return (
     <div style={{ textAlign: 'center' }}>
       {/* Logo Section */}
@@ -10,23 +26,15 @@ const Home = () => {
       </div>
       
       {/* Intro Section */}
-      <div>
+      <div style={divStyle}>
         <h1>Welcome to our Senior Project Landing Page!</h1>
         <p>
-           This site will serve as the online display of our project containing <br></br>
-           our documentation, some advance feature explanations <br></br>
-           and everything else required to fit our rubric. <br></br>
-           Enjoy!
-           
+          This site will serve as the online display of our project containing <br />
+          our documentation, some advance feature explanations <br />
+          and everything else required to fit our rubric. <br />
+          Enjoy!
         </p>
-      </div>
-      <div>
-        <h2>Team Members</h2>
-        <ul>
-          <li>Sean Work</li>
-          <li>Kenneth Molinari</li>
-          <li>Christopher Dymanus</li>
-        </ul>
+  
       </div>
     </div>
   );
