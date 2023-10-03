@@ -12,12 +12,6 @@ const Home = () => {
     margin: '0 auto'  // Center the div
   };
 
-  const listStyle = {
-    listStyleType: 'none', // No bullets
-    padding: 0,
-    margin: 0
-  };
-
   return (
     <div style={{ textAlign: 'center' }}>
       {/* Logo Section */}
@@ -34,7 +28,6 @@ const Home = () => {
           and everything else required to fit our rubric. <br />
           Enjoy!
         </p>
-  
       </div>
     </div>
   );
