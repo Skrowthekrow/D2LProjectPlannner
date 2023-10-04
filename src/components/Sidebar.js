@@ -34,12 +34,12 @@ const AppSidebar = () => {
         rootStyles={{
           position: 'fixed',
           height: '100%',
-          zIndex: 2,
+          zIndex: 9999,  // Adjusted zIndex to make sure it's above other elements
           color: 'gold'
         }}
       >
         <Menu iconShape="circle" rootStyles={{ color: 'gold' }}>
-          <div onClick={handleCollapsedChange} style={{ cursor: 'pointer' }}>
+          <div onClick={handleCollapsedChange} style={{ cursor: 'pointer', width: '100%' }}>
             <MenuItem
               icon={<FaAngleDoubleLeft />}
               style={menuItemStyle('close')}
@@ -99,3 +99,4 @@ const AppSidebar = () => {
 };
 
 export default AppSidebar;
+

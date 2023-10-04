@@ -12,6 +12,19 @@ const Home = () => {
     margin: '0 auto'  // Center the div
   };
 
+  const buttonStyle = {
+    backgroundColor: 'gold',
+    color: 'black',
+    padding: '15px 30px',
+    textAlign: 'center',
+    textDecoration: 'none',
+    display: 'inline-block',
+    fontSize: '16px',
+    margin: '10px 2px',
+    cursor: 'pointer',
+    borderRadius: '12px'
+  };
+
   return (
     <div style={{ textAlign: 'center' }}>
       {/* Logo Section */}
@@ -28,6 +41,19 @@ const Home = () => {
           and everything else required to fit our rubric. <br />
           Enjoy!
         </p>
+      </div>
+
+      {/* New Section */}
+      <div style={{ ...divStyle, marginTop: '20px' }}>
+        <h3>Go to the Web Application</h3>
+        <a 
+          href="https://d2lprojmanagerapp.azurewebsites.net" 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          style={buttonStyle}
+        >
+          Click here to head to the D2L Project Planner Web Application
+        </a>
       </div>
     </div>
   );

@@ -17,7 +17,7 @@ function App() {
   const mainContentStyle = {
     marginLeft: '80px', // Assuming the width of the collapsed sidebar is 80px
     backgroundColor: '#333', // Gray background
-    minHeight: '95vh', // Full height
+    minHeight: '96vh', // Full height
     color: 'white', // Text color
   };
 
