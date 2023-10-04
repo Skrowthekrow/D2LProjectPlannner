@@ -7,17 +7,19 @@ import {
   FaRocket,
   FaUser
 } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 
 const AppSidebar = () => {
-  const [collapsed, setCollapsed] = useState(true); // Set initial state to true to have it closed
-  const [hoveredItem, setHoveredItem] = useState(null); // Keep track of the hovered item
+  const [collapsed, setCollapsed] = useState(true);
+  const [hoveredItem, setHoveredItem] = useState(null);
 
   const handleCollapsedChange = () => {
     setCollapsed(!collapsed);
   };
 
   const menuItemStyle = (item) => ({
-    backgroundColor: hoveredItem === item ? 'rgba(30, 30, 30, 0.7)' : 'transparent',
+    backgroundColor: hoveredItem === item ? 'black' : 'transparent',
+    zIndex: hoveredItem === item ? 4 : 2
   });
 
   return (
@@ -37,17 +39,18 @@ const AppSidebar = () => {
         }}
       >
         <Menu iconShape="circle" rootStyles={{ color: 'gold' }}>
-          <MenuItem
-            icon={<FaAngleDoubleLeft />}
-            style={{ ...menuItemStyle('close'), zIndex: 3 }}
-            onMouseEnter={() => setHoveredItem('close')}
-            onMouseLeave={() => setHoveredItem(null)}
-            onClick={handleCollapsedChange}
-          >
-            {!collapsed && ''}
-          </MenuItem>
-          <a href="#home" style={{ textDecoration: 'none', color: 'inherit' }}>
-            <MenuItem 
+          <div onClick={handleCollapsedChange} style={{ cursor: 'pointer' }}>
+            <MenuItem
+              icon={<FaAngleDoubleLeft />}
+              style={menuItemStyle('close')}
+              onMouseEnter={() => setHoveredItem('close')}
+              onMouseLeave={() => setHoveredItem(null)}
+            >
+              {!collapsed && 'Close'}
+            </MenuItem>
+          </div>
+          <Link to="/home" style={{ textDecoration: 'none', color: 'inherit' }}>
+            <MenuItem
               icon={<FaHome />}
               style={menuItemStyle('home')}
               onMouseEnter={() => setHoveredItem('home')}
@@ -55,9 +58,9 @@ const AppSidebar = () => {
             >
               Home
             </MenuItem>
-          </a>
-          <a href="#documentation" style={{ textDecoration: 'none', color: 'inherit' }}>
-            <MenuItem 
+          </Link>
+          <Link to="/documentation" style={{ textDecoration: 'none', color: 'inherit' }}>
+            <MenuItem
               icon={<FaBook />}
               style={menuItemStyle('documentation')}
               onMouseEnter={() => setHoveredItem('documentation')}
@@ -65,9 +68,9 @@ const AppSidebar = () => {
             >
               Documentation
             </MenuItem>
-          </a>
-          <a href="#features" style={{ textDecoration: 'none', color: 'inherit' }}>
-            <MenuItem 
+          </Link>
+          <Link to="/features" style={{ textDecoration: 'none', color: 'inherit' }}>
+            <MenuItem
               icon={<FaRocket />}
               style={menuItemStyle('features')}
               onMouseEnter={() => setHoveredItem('features')}
@@ -75,9 +78,9 @@ const AppSidebar = () => {
             >
               Features
             </MenuItem>
-          </a>
-          <a href="#contact-us" style={{ textDecoration: 'none', color: 'inherit' }}>
-            <MenuItem 
+          </Link>
+          <Link to="/contact-us" style={{ textDecoration: 'none', color: 'inherit' }}>
+            <MenuItem
               icon={<FaUser />}
               style={menuItemStyle('contact-us')}
               onMouseEnter={() => setHoveredItem('contact-us')}
@@ -85,7 +88,7 @@ const AppSidebar = () => {
             >
               {collapsed ? '' : 'Contact Us'}
             </MenuItem>
-          </a>
+          </Link>
         </Menu>
       </Sidebar>
       <div style={{ marginLeft: collapsed ? '80px' : '200px' }}>
