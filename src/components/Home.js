@@ -47,7 +47,7 @@ const Home = () => {
       <div style={{ ...divStyle, marginTop: '20px' }}>
         <h3>Go to the Web Application</h3>
         <a 
-          href="https://d2lprojmanagerapp.azurewebsites.net" 
+          href="https://ksud2lpp-main.netlify.app" 
           target="_blank" 
           rel="noopener noreferrer" 
           style={buttonStyle}
