@@ -4,12 +4,12 @@ import logo from './component-assets/D2LPP-logo.png';  // Make sure to place you
 const Home = () => {
   const divStyle = {
     backgroundColor: 'rgba(0, 0, 0, 0.5)', // Semi-transparent black
-    borderRadius: '10px', // Rounded edges
-    color: 'gold', // Text color set to gold
+    borderRadius: '10px', 
+    color: 'gold', 
     padding: '0px',
     textAlign: 'center',
-    maxWidth: '700px',  // Set maximum width
-    margin: '0 auto'  // Center the div
+    maxWidth: '700px',
+    margin: '0 auto'  
   };
 
   const buttonStyle = {
@@ -27,23 +27,23 @@ const Home = () => {
 
   return (
     <div style={{ textAlign: 'center' }}>
-      {/* Logo Section */}
+   
       <div style={{ margin: '10px' }}>
         <img src={logo} alt="Logo" style={{ width: '300px' }} />
       </div>
       
-      {/* Intro Section */}
+
       <div style={divStyle}>
         <h1>Welcome to our Senior Project Landing Page!</h1>
         <p>
           This site will serve as the online display of our project containing <br />
-          our documentation, some advance feature explanations <br />
+          our documentation, some feature explanations <br />
           and everything else required to fit our rubric. <br />
           Enjoy!
         </p>
       </div>
 
-      {/* New Section */}
+
       <div style={{ ...divStyle, marginTop: '20px' }}>
         <h3>Go to the Web Application</h3>
         <a 
