@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from './component-assets/D2LPP-logo.png';  // Make sure to place your logo in the same directory or update this path
+import logo from './component-assets/D2LPP-logo.png';  
 
 const Home = () => {
   const divStyle = {

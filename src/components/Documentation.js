@@ -7,7 +7,6 @@ const Documentation = () => {
     { name: 'SP-4 - D2L 3rd Party App - Project Plan.docx', description: 'Project Plan' },
     { name: 'SP-4 No Color-D2L 3rd Party Application-Requirements.docx', description: 'Software Requirements Specifications' },
     { name: 'SP-4 No Color-D2L 3rd Party Application-Design.docx', description: 'Software Design Specifications' },
-    // Add more files here
   ];
 
   return (
@@ -45,8 +44,10 @@ const Documentation = () => {
             </a>
           </li>
           <li>
-            <span>D2L Project Planner Repo (Coming Soon!)</span>
-            {/* You can add a GitHub link here once it's available */}
+            <span>D2L Project Planner Repo</span> 
+            <a href="https://github.com/KSU-D2LPP/Main-Project" target="_blank" rel="noopener noreferrer">
+              <img src={githubButton} alt="GitHub" style={{ marginLeft: '10px', cursor: 'pointer', width: '20px', height: '20px' }} />
+            </a>
           </li>
         </ul>
       </div>
