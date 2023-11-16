@@ -2,7 +2,7 @@ import React from 'react';
 
 const ContactUs = () => {
   return (
-    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', margin: '30px' }}>
+    <div style={{ display: 'flex', flexDirection: 'column', margin: '30px' }}>
       <h1>Contact Us</h1>
       
       {/* Team Information */}
